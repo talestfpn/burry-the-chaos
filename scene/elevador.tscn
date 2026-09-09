@@ -1,0 +1,84 @@
+[gd_scene format=3 uid="uid://dehu2bv44kk82"]
+
+[ext_resource type="Texture2D" uid="uid://br472x5brvpqi" path="res://sprites/elevador.png" id="1_53q25"]
+[ext_resource type="Script" path="res://scripts/Elevador.cs" id="1_gbci5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gbci5"]
+atlas = ExtResource("1_53q25")
+region = Rect2(50, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kwhog"]
+atlas = ExtResource("1_53q25")
+region = Rect2(100, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sywx0"]
+atlas = ExtResource("1_53q25")
+region = Rect2(150, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfsyc"]
+atlas = ExtResource("1_53q25")
+region = Rect2(200, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8i71o"]
+atlas = ExtResource("1_53q25")
+region = Rect2(250, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a63t0"]
+atlas = ExtResource("1_53q25")
+region = Rect2(300, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqijb"]
+atlas = ExtResource("1_53q25")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2aqle"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gbci5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kwhog")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sywx0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfsyc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8i71o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a63t0")
+}],
+"loop": false,
+"name": &"abrindo",
+"speed": 3.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqijb")
+}],
+"loop": false,
+"name": &"fechado",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gbci5"]
+size = Vector2(28, 38)
+
+[node name="Elevador" type="StaticBody2D" unique_id=151326195]
+script = ExtResource("1_gbci5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=675126980]
+sprite_frames = SubResource("SpriteFrames_2aqle")
+animation = &"abrindo"
+frame = 5
+frame_progress = 1.0
+
+[node name="AreaDeteccao" type="Area2D" parent="." unique_id=60451952]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccao" unique_id=791320954]
+position = Vector2(0, 6)
+shape = SubResource("RectangleShape2D_gbci5")

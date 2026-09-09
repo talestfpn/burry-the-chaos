@@ -1,0 +1,14 @@
+[gd_scene format=3]
+[sub_resource type="Gradient" id="gradient"]
+colors = PackedColorArray(0.024,0.037,0.05,1, 0.055,0.078,0.074,1)
+[sub_resource type="GradientTexture2D" id="texture"]
+gradient = SubResource("gradient")
+width = 320
+height = 180
+fill_from = Vector2(0,0)
+fill_to = Vector2(0,1)
+[node name="InteriorDepth" type="CanvasLayer"]
+layer = -100
+[node name="Depth" type="Sprite2D" parent="."]
+position = Vector2(160,90)
+texture = SubResource("texture")

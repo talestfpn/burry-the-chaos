@@ -1,0 +1,4 @@
+[gd_scene format=3]
+[ext_resource type="Script" path="res://tests/PremiumProgression.cs" id="script"]
+[node name="PremiumProgression" type="Node"]
+script = ExtResource("script")

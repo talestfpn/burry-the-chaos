@@ -1,0 +1,8 @@
+[gd_scene format=3 uid="uid://blnhsqisbcgrw"]
+
+[ext_resource type="Script" path="res://scripts/Sprite2DFade.cs" id="1_2qtq6"]
+
+[node name="Node2D" type="Node2D" unique_id=1743217789]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1403909215]
+script = ExtResource("1_2qtq6")

@@ -1,0 +1,154 @@
+[gd_scene format=3 uid="uid://pob0swwx06hj"]
+
+[ext_resource type="Script" path="res://scripts/Caveira.cs" id="1_qjr85"]
+[ext_resource type="Texture2D" uid="uid://scn0312tvt6q" path="res://sprites/caveira.png" id="2_bbuqe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i4176"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_prwps"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqc68"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgt0g"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b6foh"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(96, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s7hvd"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(120, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nmxbm"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(144, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3jhwp"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(168, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j05rh"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(192, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwnjq"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(216, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qp7e"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(240, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qjr85"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6jh6u"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(264, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q60q4"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(288, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_crvvt"]
+atlas = ExtResource("2_bbuqe")
+region = Rect2(312, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8ptts"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i4176")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_prwps")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqc68")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgt0g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b6foh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s7hvd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nmxbm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3jhwp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j05rh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwnjq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qp7e")
+}],
+"loop": false,
+"name": &"attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qjr85")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6jh6u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q60q4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_crvvt")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gjssm"]
+size = Vector2(4, 18)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y5vnv"]
+radius = 11.0
+
+[node name="Caveira" type="CharacterBody2D" unique_id=2058521903]
+script = ExtResource("1_qjr85")
+velocidade_ataque = 2.0
+tempo_vulneravel = 0.25
+dano_ataque = 3
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=967096034]
+sprite_frames = SubResource("SpriteFrames_8ptts")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=485911082]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_gjssm")
+
+[node name="HitboxAtaque" type="Area2D" parent="." unique_id=1871047391]
+visible = false
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitboxAtaque" unique_id=581352593]
+position = Vector2(-7, 0)
+shape = SubResource("CircleShape2D_y5vnv")

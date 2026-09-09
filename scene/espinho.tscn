@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://daaki8nah3qt0"]
+
+[ext_resource type="Script" path="res://scripts/Espinho.cs" id="1_cmi34"]
+[ext_resource type="Texture2D" uid="uid://cifuvnixb0kwc" path="res://sprites/espinhos.png" id="1_sog8g"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cmi34"]
+atlas = ExtResource("1_sog8g")
+region = Rect2(0, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7qu5q"]
+atlas = ExtResource("1_sog8g")
+region = Rect2(8, 0, 8, 8)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt3e3"]
+atlas = ExtResource("1_sog8g")
+region = Rect2(16, 0, 8, 8)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_33uhd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cmi34")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7qu5q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt3e3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8yvf4"]
+size = Vector2(16, 2)
+
+[node name="Node2D" type="Node2D" unique_id=384259914]
+
+[node name="Espinho" type="Area2D" parent="." unique_id=1600701183]
+script = ExtResource("1_cmi34")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Espinho" unique_id=543028956]
+sprite_frames = SubResource("SpriteFrames_33uhd")
+autoplay = "default"
+frame_progress = 0.7723323
+
+[node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="Espinho" unique_id=1110365441]
+position = Vector2(8, 0)
+sprite_frames = SubResource("SpriteFrames_33uhd")
+autoplay = "default"
+frame_progress = 0.44459543
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Espinho" unique_id=721739148]
+position = Vector2(4, 2)
+shape = SubResource("RectangleShape2D_8yvf4")
+
+[connection signal="body_entered" from="Espinho" to="Espinho" method="_on_body_entered"]

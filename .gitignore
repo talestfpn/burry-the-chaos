@@ -1,0 +1,12 @@
+# Godot 4+ specific ignores
+.godot/
+/android/
+
+# Arquivos gerados localmente pelo Godot e pelos testes
+.source-backup/
+/artifacts/
+*.tmp
+*.import
+
+# Cópia de segurança antiga do projeto
+BuryTheChaos.csproj.old

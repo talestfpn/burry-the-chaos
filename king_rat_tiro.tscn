@@ -1,0 +1,55 @@
+[gd_scene format=3 uid="uid://o4tjdcqm328c"]
+
+[ext_resource type="Script" path="res://KingRatTiro.cs" id="1_puu76"]
+[ext_resource type="Texture2D" uid="uid://dwjhhi1cyo8g6" path="res://sprites/king rat tiro.png" id="2_2ms0k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3xfi7"]
+atlas = ExtResource("2_2ms0k")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sgj2"]
+atlas = ExtResource("2_2ms0k")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xgvkq"]
+atlas = ExtResource("2_2ms0k")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_58t13"]
+atlas = ExtResource("2_2ms0k")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j140c"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3xfi7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sgj2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xgvkq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_58t13")
+}],
+"loop": true,
+"name": &"tiro",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_brdbv"]
+radius = 8.0
+
+[node name="KingRatTiro" type="Area2D" unique_id=977105518]
+script = ExtResource("1_puu76")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=186128655]
+sprite_frames = SubResource("SpriteFrames_j140c")
+animation = &"tiro"
+frame_progress = 0.6258256
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatedSprite2D" unique_id=1624491517]
+position = Vector2(-2, 0)
+shape = SubResource("CircleShape2D_brdbv")

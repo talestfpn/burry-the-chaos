@@ -1,0 +1,49 @@
+[gd_scene format=3]
+
+[ext_resource type="Script" path="res://scripts/WorldShortcut.cs" id="1_shortcut"]
+
+[ext_resource type="TileSet" path="res://tiles/terrain.tres" id="art_terrain"]
+[ext_resource type="FontFile" path="res://fontes/bury.ttf" id="font"]
+
+[sub_resource type="RectangleShape2D" id="Rectangle_barrier"]
+size = Vector2(12, 64)
+
+[sub_resource type="RectangleShape2D" id="Rectangle_activation"]
+size = Vector2(34, 58)
+
+[node name="WorldShortcut" type="Node2D"]
+script = ExtResource("1_shortcut")
+
+
+[node name="DoorVisual" type="Node2D" parent="."]
+
+
+[node name="Shutter" type="TileMapLayer" parent="DoorVisual"]
+position = Vector2(-8, -32)
+z_index = 0
+modulate = Color(0.75, 0.84, 0.95, 1)
+collision_enabled = false
+occlusion_enabled = false
+tile_set = ExtResource("art_terrain")
+tile_map_data = PackedByteArray("AAAAAAAABAAAAAAAAAABAAAABAACAAAAAAAAAAEABAAAAAEAAAABAAEABAACAAEAAAAAAAIABAAAAAEAAAABAAIABAACAAEAAAAAAAMABAAAAAEAAAABAAMABAACAAEAAAAAAAQABAAAAAEAAAABAAQABAACAAEAAAAAAAUABAAAAAEAAAABAAUABAACAAEAAAAAAAYABAAAAAEAAAABAAYABAACAAEAAAAAAAcABAAAAAIAAAABAAcABAACAAIAAAA=")
+[node name="Barrier" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Barrier"]
+shape = SubResource("Rectangle_barrier")
+
+[node name="ActivationArea" type="Area2D" parent="."]
+position = Vector2(22, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ActivationArea"]
+shape = SubResource("Rectangle_activation")
+
+[node name="Prompt" type="Label" parent="ActivationArea"]
+visible = false
+offset_left = -3.0
+offset_top = -24.0
+offset_right = 8.0
+offset_bottom = -12.0
+theme_override_colors/font_color = Color(0.92, 0.82, 0.48, 1)
+theme_override_fonts/font = ExtResource("font")
+theme_override_font_sizes/font_size = 6
+text = "F"

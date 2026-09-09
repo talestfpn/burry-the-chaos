@@ -1,0 +1,44 @@
+[gd_scene load_steps=7 format=3]
+
+[ext_resource type="Script" path="res://tests/PlayerPolishSmokeTest.cs" id="1_test"]
+[ext_resource type="PackedScene" path="res://entities/bury.tscn" id="2_player"]
+[ext_resource type="Script" path="res://tests/PlayerPolishTarget.cs" id="3_target"]
+
+[sub_resource type="RectangleShape2D" id="Rectangle_floor"]
+size = Vector2(180, 16)
+
+[sub_resource type="RectangleShape2D" id="Rectangle_wall"]
+size = Vector2(16, 160)
+
+[sub_resource type="CircleShape2D" id="Circle_target"]
+radius = 4.0
+
+[node name="PlayerPolishSmokeTest" type="Node2D"]
+script = ExtResource("1_test")
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(90, 160)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+shape = SubResource("Rectangle_floor")
+
+[node name="Wall" type="StaticBody2D" parent="."]
+position = Vector2(220, 80)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall"]
+shape = SubResource("Rectangle_wall")
+
+[node name="Target" type="Area2D" parent="."]
+position = Vector2(92, 148)
+script = ExtResource("3_target")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Target"]
+shape = SubResource("Circle_target")
+
+[node name="bury" parent="." instance=ExtResource("2_player")]
+position = Vector2(80, 150)
+
+[node name="Camera2D" parent="bury" index="2"]
+enabled = false
+
+[editable path="bury"]

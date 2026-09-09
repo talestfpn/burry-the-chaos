@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://ci01j0uwtrql1"]
+
+[ext_resource type="Texture2D" uid="uid://bn3q30410dn2w" path="res://sprites/stamina_progress.png" id="1_jcq85"]
+[ext_resource type="Script" path="res://scripts/StaminaBar.cs" id="1_opioo"]
+[ext_resource type="Texture2D" uid="uid://c7n3uo3c5ijw3" path="res://sprites/stamina_bar.png" id="2_5qi8l"]
+
+[node name="Node2D" type="Node2D" unique_id=923764442]
+
+[node name="ProgressBar" type="TextureProgressBar" parent="." unique_id=1700773016]
+offset_left = 96.0
+offset_top = 18.0
+offset_right = 236.98
+offset_bottom = 27.0
+value = 100.0
+texture_under = ExtResource("2_5qi8l")
+texture_progress = ExtResource("1_jcq85")
+tint_under = Color(0, 0, 0, 1)
+tint_over = Color(0, 0, 0, 1)
+tint_progress = Color(1, 0.82, 0.82, 1)
+script = ExtResource("1_opioo")

@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://c60ld0ggm0c6n"]
+
+[ext_resource type="Script" path="res://scripts/TransicaoCena.cs" id="1_2f75x"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0m4xi"]
+resource_local_to_scene = true
+size = Vector2(89, 104)
+
+[node name="TransicaoCena" type="Area2D" unique_id=1931129894]
+script = ExtResource("1_2f75x")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2089446720]
+shape = SubResource("RectangleShape2D_0m4xi")

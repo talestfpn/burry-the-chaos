@@ -1,0 +1,20 @@
+[gd_resource type="TileSet" format=3]
+[ext_resource type="Texture2D" path="res://sprites/tile bosque.png" id="forest"]
+[sub_resource type="AtlasTexture" id="soil"]
+atlas = ExtResource("forest")
+region = Rect2(96,0,24,24)
+[sub_resource type="TileSetAtlasSource" id="source"]
+texture = SubResource("soil")
+texture_region_size = Vector2i(8,8)
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+0:1/0 = 0
+1:1/0 = 0
+2:1/0 = 0
+0:2/0 = 0
+1:2/0 = 0
+2:2/0 = 0
+[resource]
+tile_size = Vector2i(8,8)
+sources/4 = SubResource("source")

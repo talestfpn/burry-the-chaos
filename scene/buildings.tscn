@@ -1,0 +1,228 @@
+[gd_scene format=4 uid="uid://cv63ffertsfb2"]
+
+[ext_resource type="PackedScene" uid="uid://bevhfqbyuke0x" path="res://entities/bury.tscn" id="1_r4tqj"]
+[ext_resource type="TileSet" uid="uid://ds5w88fx5ycev" path="res://tiles/terrain.tres" id="2_oa0mi"]
+[ext_resource type="Texture2D" uid="uid://ctbbmxi8ofpqd" path="res://sprites/ceu.png" id="3_fqkoy"]
+[ext_resource type="Texture2D" uid="uid://bmy3hi7p0ofe2" path="res://sprites/nuvens 1.png" id="4_vwdhu"]
+[ext_resource type="Texture2D" uid="uid://bfb04uo4hdyfd" path="res://sprites/nuvens 2.png" id="5_tnlkl"]
+[ext_resource type="Texture2D" uid="uid://cx2qts4woive6" path="res://sprites/nuvens 3.png" id="6_ry4o8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vwdhu"]
+atlas = ExtResource("3_fqkoy")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ku0i6"]
+atlas = ExtResource("3_fqkoy")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tnlkl"]
+atlas = ExtResource("3_fqkoy")
+region = Rect2(640, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ry4o8"]
+atlas = ExtResource("3_fqkoy")
+region = Rect2(960, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o22x8"]
+atlas = ExtResource("3_fqkoy")
+region = Rect2(1280, 0, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_84a8p"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vwdhu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ku0i6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tnlkl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ry4o8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o22x8")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_84a8p"]
+atlas = ExtResource("4_vwdhu")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3eg5y"]
+atlas = ExtResource("4_vwdhu")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvml8"]
+atlas = ExtResource("4_vwdhu")
+region = Rect2(640, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_r2se7"]
+atlas = ExtResource("4_vwdhu")
+region = Rect2(960, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m775l"]
+atlas = ExtResource("4_vwdhu")
+region = Rect2(1280, 0, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gw0g5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_84a8p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3eg5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvml8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_r2se7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m775l")
+}],
+"loop": true,
+"name": &"default",
+"speed": 1.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gw0g5"]
+atlas = ExtResource("5_tnlkl")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7luh"]
+atlas = ExtResource("5_tnlkl")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qkx1m"]
+atlas = ExtResource("5_tnlkl")
+region = Rect2(640, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gntby"]
+atlas = ExtResource("5_tnlkl")
+region = Rect2(960, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ql4no"]
+atlas = ExtResource("5_tnlkl")
+region = Rect2(1280, 0, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_thn78"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gw0g5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7luh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qkx1m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gntby")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ql4no")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_33r0f"]
+atlas = ExtResource("6_ry4o8")
+region = Rect2(0, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vyotk"]
+atlas = ExtResource("6_ry4o8")
+region = Rect2(320, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eru36"]
+atlas = ExtResource("6_ry4o8")
+region = Rect2(640, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6wtey"]
+atlas = ExtResource("6_ry4o8")
+region = Rect2(960, 0, 320, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqeih"]
+atlas = ExtResource("6_ry4o8")
+region = Rect2(1280, 0, 320, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nqowl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_33r0f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vyotk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eru36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6wtey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dqeih")
+}],
+"loop": true,
+"name": &"nuvens 2",
+"speed": 5.0
+}]
+
+[node name="buildings" type="Node2D" unique_id=822628865]
+
+[node name="bury" parent="." unique_id=1151800005 instance=ExtResource("1_r4tqj")]
+position = Vector2(26, 112)
+
+[node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1811543083]
+tile_map_data = PackedByteArray("AAACABAABAABAAAAAAADABAABAABAAAAAAAEABAABAABAAAAAAAFABAABAABAAAAAAAGABAABAABAAAAAAAHABAABAABAAAAAAAIABAABAABAAAAAAAJABAABAABAAAAAAAKABAABAABAAAAAAALABAABAABAAAAAAAMABAABAABAAAAAAANABAABAABAAAAAAAOABAABAABAAAAAAAPABAABAABAAAAAAAQABAABAABAAAAAAARABAABAABAAAAAAASABAABAABAAAAAAATABAABAABAAAAAAAUABAABAABAAAAAAAVABAABAABAAAAAAAWABAABAABAAAAAAAXABAABAABAAAAAAAYABAABAABAAAAAAAZABAABAABAAAAAAAaABAABAAFAAIAAAAaAA4ABAAAAAEAAAAaAA0ABAAAAAEAAAAaAA8ABAAAAAEAAAAaAAwABAAAAAEAAAAAABAABAABAAAAAAABABAABAABAAAAAAAaAAsABAAAAAAAAAAbAAsABAABAAAAAAAcAAsABAABAAAAAAAdAAsABAABAAAAAAAeAAsABAABAAAAAAAfAAsABAABAAAAAAAgAAsABAABAAAAAAAhAAsABAABAAAAAAAiAAsABAABAAAAAAAjAAoABAAAAAAAAAAkAAoABAABAAAAAAAlAAoABAABAAAAAAAmAAoABAABAAAAAAAnAAoABAABAAAAAAAoAAoABAABAAAAAAApAAoABAABAAAAAAAqAAoABAABAAAAAAArAAoABAABAAAAAAAjAAsABAAFAAIAAAAsAAoABAABAAAAAAAtAAoABAABAAAAAAAuAAoABAABAAAAAAAvAAoABAABAAAAAAAwAAoABAABAAAAAAAxAAoABAABAAAAAAAyAAoABAABAAAAAAAzAAoABAABAAAAAAA0AAoABAABAAAAAAA1AAoABAABAAAAAAA2AAoABAABAAAAAAA3AAoABAABAAAAAAA4AAoABAABAAAAAAA5AAoABAABAAAAAAA6AAoABAABAAAAAAA7AAoABAABAAAAAAA8AAoABAABAAAAAAA9AAoABAABAAAAAAA+AAoABAABAAAAAAA/AAoABAABAAAAAABAAAoABAABAAAAAABBAAoABAABAAAAAABCAAoABAABAAAAAABDAAoABAABAAAAAABEAAoABAABAAAAAABFAAoABAABAAAAAAArAAYABAAHAAAAAAAsAAYABAAHAAAAAAAtAAYABAAHAAAAAAAuAAYABAAHAAAAAAAvAAYABAAHAAAAAAAwAAYABAAHAAAAAAAxAAYABAAHAAAAAAAyAAYABAAHAAAAAAAzAAYABAAHAAAAAAA0AAYABAAHAAAAAAA1AAYABAAHAAAAAAA2AAYABAAHAAAAAAAqAAYABAAGAAAAAAA3AAUABAAIAAEAAAA3AAYABAAIAAAAAAA3AAcABAAIAAEAAAA3AAgABAAIAAEAAAA3AAkABAAIAAEAAAA2AAkABAAHAAEAAAA1AAkABAAHAAEAAAA0AAkABAAHAAEAAAAzAAkABAAHAAEAAAAyAAkABAAHAAEAAAAxAAkABAAHAAEAAAAwAAkABAAHAAEAAAAvAAkABAAHAAEAAAAuAAkABAAHAAEAAAAtAAkABAAHAAEAAAAsAAkABAAHAAEAAAArAAkABAAHAAEAAAAqAAkABAAGAAEAAAArAAcABAAHAAEAAAArAAgABAAHAAEAAAAsAAgABAAHAAEAAAAtAAgABAAHAAEAAAAuAAgABAAHAAEAAAAvAAgABAAHAAEAAAAuAAcABAAHAAEAAAAtAAcABAAHAAEAAAAsAAcABAAHAAEAAAAvAAcABAAHAAEAAAAwAAcABAAHAAEAAAAxAAcABAAHAAEAAAAxAAgABAAHAAEAAAAwAAgABAAHAAEAAAAyAAcABAAHAAEAAAAyAAgABAAHAAEAAAAzAAcABAAHAAEAAAA0AAcABAAHAAEAAAA1AAcABAAHAAEAAAA2AAcABAAHAAEAAAA2AAgABAAHAAEAAAA1AAgABAAHAAEAAAA0AAgABAAHAAEAAAAzAAgABAAHAAEAAAAqAAcABAAGAAEAAAAqAAgABAAGAAEAAAArAAUABAAGAAEAAAArAAQABAAGAAEAAAArAAMABAAGAAEAAAArAAIABAAGAAEAAAArAAEABAAGAAEAAAArAAAABAAGAAEAAAAsAAAABAAHAAEAAAAsAAEABAAHAAEAAAAsAAIABAAHAAEAAAAsAAMABAAHAAEAAAAsAAQABAAHAAEAAAAtAAQABAAHAAEAAAAtAAUABAAHAAEAAAAuAAUABAAHAAEAAAAvAAUABAAHAAEAAAAsAAUABAAHAAEAAAAwAAUABAAHAAEAAAAxAAUABAAHAAEAAAAyAAUABAAHAAEAAAAzAAUABAAHAAEAAAA0AAUABAAHAAEAAAA0AAQABAAHAAEAAAA1AAQABAAHAAEAAAA1AAMABAAHAAEAAAA1AAIABAAHAAEAAAA1AAEABAAHAAEAAAA0AAEABAAHAAEAAAA0AAAABAAHAAEAAAAzAAAABAAHAAEAAAAyAAAABAAHAAEAAAAxAAAABAAHAAEAAAAwAAAABAAHAAEAAAAvAAAABAAHAAEAAAAuAAAABAAHAAEAAAAtAAAABAAHAAEAAAAtAAEABAAHAAEAAAAtAAIABAAHAAEAAAAtAAMABAAHAAEAAAAuAAMABAAHAAEAAAAuAAQABAAHAAEAAAAuAAIABAAHAAEAAAAuAAEABAAHAAEAAAAvAAEABAAHAAEAAAAwAAEABAAHAAEAAAAxAAEABAAHAAEAAAAyAAEABAAHAAEAAAAzAAEABAAHAAEAAAA0AAIABAAHAAEAAAA0AAMABAAHAAEAAAAzAAMABAAHAAEAAAAzAAQABAAHAAEAAAAyAAQABAAHAAEAAAAyAAMABAAHAAEAAAAzAAIABAAHAAEAAAAyAAIABAAHAAEAAAAxAAMABAAHAAEAAAAxAAIABAAHAAEAAAAxAAQABAAHAAEAAAAwAAMABAAHAAEAAAAwAAIABAAHAAEAAAAvAAQABAAHAAEAAAAvAAMABAAHAAEAAAAvAAIABAAHAAEAAAAwAAQABAAHAAEAAAA1AAUABAAHAAEAAAA2AAUABAAHAAEAAAA2AAQABAAHAAEAAAA2AAMABAAHAAEAAAA2AAIABAAHAAEAAAA2AAEABAAHAAEAAAA2AAAABAAHAAEAAAA1AAAABAAHAAEAAAA3AAQABAAIAAEAAAA3AAMABAAIAAEAAAA3AAIABAAIAAEAAAA3AAEABAAIAAEAAAA3AAAABAAIAAEAAABGAAoABAABAAAAAABHAAoABAABAAAAAABIAAoABAABAAAAAABJAAoABAABAAAAAABKAAoABAABAAAAAABLAAoABAABAAAAAABDAAYABAABAAAAAABEAAYABAABAAAAAABFAAYABAABAAAAAABGAAYABAABAAAAAABHAAYABAABAAAAAABIAAYABAABAAAAAABJAAYABAABAAAAAABKAAYABAABAAAAAABCAAYABAAAAAAAAABLAAYABAACAAAAAABLAAcABAACAAIAAABKAAcABAABAAIAAABDAAcABAABAAIAAABEAAcABAABAAIAAABFAAcABAABAAIAAABGAAcABAABAAIAAABHAAcABAABAAIAAABIAAcABAABAAIAAABJAAcABAABAAIAAABCAAcABAAAAAIAAABDAAgABAABAAIAAABEAAgABAABAAIAAABFAAgABAABAAIAAABGAAgABAABAAIAAABHAAgABAABAAIAAABIAAgABAABAAIAAABJAAgABAABAAIAAABKAAgABAABAAIAAABLAAgABAACAAIAAABCAAgABAAAAAIAAAA=")
+tile_set = ExtResource("2_oa0mi")
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="." unique_id=1892981677]
+
+[node name="céu" type="ParallaxLayer" parent="ParallaxBackground" unique_id=807842613]
+motion_scale = Vector2(0.3, 0.3)
+motion_mirroring = Vector2(320, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/céu" unique_id=2006263557]
+texture_repeat = 2
+sprite_frames = SubResource("SpriteFrames_84a8p")
+autoplay = "default"
+frame_progress = 0.44074327
+centered = false
+
+[node name="nuvens 1" type="ParallaxLayer" parent="ParallaxBackground" unique_id=1475209973]
+motion_scale = Vector2(0.6, 0.6)
+motion_mirroring = Vector2(320, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/nuvens 1" unique_id=1744989934]
+texture_repeat = 2
+position = Vector2(0, -1)
+sprite_frames = SubResource("SpriteFrames_gw0g5")
+autoplay = "default"
+frame_progress = 0.42673275
+centered = false
+
+[node name="Parallax2D" type="Parallax2D" parent="ParallaxBackground" unique_id=1737359063]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/Parallax2D" unique_id=308182710]
+position = Vector2(161, 97)
+sprite_frames = SubResource("SpriteFrames_thn78")
+autoplay = "default"
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground" unique_id=836141854]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ParallaxBackground/ParallaxLayer" unique_id=1570284881]
+position = Vector2(159, 101)
+sprite_frames = SubResource("SpriteFrames_nqowl")
+animation = &"nuvens 2"

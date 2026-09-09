@@ -1,0 +1,146 @@
+[gd_scene format=3 uid="uid://dqstxmytpappg"]
+
+[ext_resource type="Script" path="res://scripts/InimigoVoador.cs" id="1_1optb"]
+[ext_resource type="Texture2D" uid="uid://nv1u0j247g35" path="res://sprites/inimigo_voando.png" id="2_ok2jt"]
+[ext_resource type="Texture2D" uid="uid://0t0hovjk2rmw" path="res://sprites/inimigo mosquito ataque.png" id="3_xe2mn"]
+[ext_resource type="Texture2D" uid="uid://cs7gqlcxh6tfj" path="res://sprites/inimigo voador morte.png" id="4_ok2jt"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0wsit"]
+atlas = ExtResource("2_ok2jt")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bqfjd"]
+atlas = ExtResource("2_ok2jt")
+region = Rect2(18, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i0y21"]
+atlas = ExtResource("2_ok2jt")
+region = Rect2(36, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmsou"]
+atlas = ExtResource("3_xe2mn")
+region = Rect2(0, 0, 15, 22)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5vf6v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0wsit")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bqfjd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i0y21")
+}],
+"loop": true,
+"name": &"fly",
+"speed": 7.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmsou")
+}],
+"loop": true,
+"name": &"hit",
+"speed": 3.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oybni"]
+atlas = ExtResource("4_ok2jt")
+region = Rect2(0, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tto1n"]
+atlas = ExtResource("4_ok2jt")
+region = Rect2(18, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nr5ql"]
+atlas = ExtResource("4_ok2jt")
+region = Rect2(36, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q85t2"]
+atlas = ExtResource("4_ok2jt")
+region = Rect2(54, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h6oue"]
+atlas = ExtResource("4_ok2jt")
+region = Rect2(72, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hi5xd"]
+atlas = ExtResource("4_ok2jt")
+region = Rect2(90, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nwbkd"]
+atlas = ExtResource("4_ok2jt")
+region = Rect2(108, 0, 18, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lvdh7"]
+atlas = ExtResource("4_ok2jt")
+region = Rect2(126, 0, 18, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bqfjd"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oybni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tto1n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nr5ql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q85t2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h6oue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hi5xd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nwbkd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lvdh7")
+}],
+"loop": false,
+"name": &"morte",
+"speed": 12.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_rt3yo"]
+radius = 4.0
+height = 10.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g653c"]
+size = Vector2(2, 79)
+
+[node name="InimigoVoador" type="Area2D" unique_id=1584279418]
+script = ExtResource("1_1optb")
+
+[node name="InimigoAtaque" type="AnimatedSprite2D" parent="." unique_id=1592614908]
+sprite_frames = SubResource("SpriteFrames_5vf6v")
+animation = &"fly"
+autoplay = "fly"
+
+[node name="InimigoMachucado" type="AnimatedSprite2D" parent="." unique_id=1775312336]
+visible = false
+sprite_frames = SubResource("SpriteFrames_bqfjd")
+animation = &"morte"
+frame = 7
+frame_progress = 1.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=165890783]
+shape = SubResource("CapsuleShape2D_rt3yo")
+
+[node name="AreaDeteccao" type="Area2D" parent="." unique_id=987195053]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AreaDeteccao" unique_id=1608588369]
+position = Vector2(0, 38.5)
+shape = SubResource("RectangleShape2D_g653c")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="body_entered" from="AreaDeteccao" to="." method="_on_area_deteccao_body_entered"]
+[connection signal="body_exited" from="AreaDeteccao" to="." method="_on_area_deteccao_body_exited"]
